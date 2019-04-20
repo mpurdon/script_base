@@ -1,0 +1,37 @@
+-r requirements.txt
+
+tox
+bumpversion
+bandit
+wheel
+watchdog
+check-manifest
+twine
+incremental
+towncrier
+
+#flake8==3.7.6
+#flake8-commas
+#flake8-colors
+#flake8-comprehensions
+#flake8-string-format
+#flake8-print
+#flake8-quotes
+# flake8-per-file-ignores
+
+restructuredtext_lint
+doc8
+sphinx
+PyYAML
+
+factory-boy
+pytest>=3.6
+pytest-cov
+pytest-factoryboy
+pytest-picked
+pytest-pythonpath
+pytest-runner
+pytest-sugar
+
+coverage
+responses==0.10.5
