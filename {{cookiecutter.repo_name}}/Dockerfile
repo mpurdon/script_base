@@ -16,7 +16,7 @@ RUN pip install --install-option="--prefix=/install" -r /requirements_dev.txt
 FROM python_build_container as python_build
 
 COPY --from=python_build_container /install /usr/local
-COPY .. /app
+COPY . /app
 
 WORKDIR /app
 
