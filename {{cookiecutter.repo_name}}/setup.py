@@ -2,6 +2,7 @@
 
 import io
 import re
+
 from glob import glob
 from os.path import basename
 from os.path import dirname
@@ -10,13 +11,6 @@ from os.path import splitext
 
 from setuptools import find_packages
 from setuptools import setup
-
-try:
-    # Allow installing package without any Cython available. This
-    # assumes you are going to include the .c files in your sdist.
-    import Cython
-except ImportError:
-    Cython = None
 
 
 def read(*names, **kwargs):
@@ -57,16 +51,10 @@ setup(
 
         'Operating System :: Unix',
         'Operating System :: POSIX',
-        'Operating System :: Microsoft :: Windows',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: Implementation :: CPython',
-        'Programming Language :: Python :: Implementation :: PyPy',
         'Topic :: Utilities',
     ],
     project_urls={
@@ -86,8 +74,12 @@ setup(
 {%- if cookiecutter.command_line_interface == 'click' %}
         'click',
 {%- endif %}
+        # eg: 'aspectlib==1.1.1', 'six>=1.7',
     ],
     extras_require={
+        # eg:
+        #   'rst': ['docutils>=0.11'],
+        #   ':python_version=="2.6"': ['argparse'],
     },
 {%- if cookiecutter.command_line_interface != 'no' %}
     entry_points={

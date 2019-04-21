@@ -1,5 +1,6 @@
 {
     "full_name": "Matthew Purdon",
+    "email": "matthew@codenaked.org",
     "github_username": "mpurdon",
     "project_name": "Nameless",
     "repo_name": "python-{{ cookiecutter.project_name|lower|replace(' ','-') }}",
@@ -26,5 +27,5 @@
     "sphinx_doctest": ["no", "yes"],
     "requiresio": ["yes", "no"],
 
-    "_extensions": []
+    "_extensions": ["jinja2_time.TimeExtension"]
 }
